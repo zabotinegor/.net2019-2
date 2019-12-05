@@ -1,0 +1,6 @@
+﻿namespace LibUI
+{
+    class ConsoleUI
+    {
+    }
+}
