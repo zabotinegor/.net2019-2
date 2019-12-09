@@ -6,7 +6,6 @@ namespace Task.ConsoleApp
     {
         static void Main(string[] args)
         {
-
             Console.ReadKey();
         }
     }

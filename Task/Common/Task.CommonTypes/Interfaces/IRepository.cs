@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Task.CommonTypes.Interfaces
 {
-    public interface ICrudData<T>
+    public interface IRepository<T>
     {
         bool Add(T item);
 

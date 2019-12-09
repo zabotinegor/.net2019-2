@@ -4,23 +4,23 @@ using Task.CommonTypes.Interfaces;
 
 namespace Task.StaticStorage
 {
-    class ListStorage<T> : ICrudData<T>
-        where T : IMoneyMovement
+    public class UserRepository<T> : IRepository<T>
+        where T : IUser
     {
-        private static readonly List<T> listMovements;
+        private static readonly List<T> userList;
 
-        static ListStorage()
+        static UserRepository()
         {
-            listMovements = new List<T>();
+            userList = new List<T>();
         }
 
         public bool Add(T item)
         {
-            bool result = listMovements.Contains(item);
+            bool result = userList.Contains(item);
 
             if (result)
             {
-                listMovements.Add(item);
+                userList.Add(item);
             }
 
             return result;
@@ -28,12 +28,12 @@ namespace Task.StaticStorage
 
         public bool Delete(int id)
         {
-            return listMovements.Remove(listMovements.Find(it => it.Id == id));
+            return userList.Remove(userList.Find(it => it.Id == id));
         }
 
         public T Get(int id)
         {
-            return listMovements.FirstOrDefault(it => it.Id == id);
+            return userList.FirstOrDefault(it => it.Id == id);
         }
 
         public bool Update(T item)
@@ -48,9 +48,9 @@ namespace Task.StaticStorage
             return result;
         }
 
-        IEnumerable<T> ICrudData<T>.Get()
+        IEnumerable<T> IRepository<T>.Get()
         {
-            return listMovements;
+            return userList;
         }
     }
 }
