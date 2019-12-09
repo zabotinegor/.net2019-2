@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace ConsoleApp
+namespace Task.ConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Resources.Resources.HelloWord);
 
             Console.ReadKey();
         }
