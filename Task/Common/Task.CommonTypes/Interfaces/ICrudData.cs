@@ -2,7 +2,7 @@
 
 namespace Task.CommonTypes.Interfaces
 {
-    public interface ICrudData<T> where T : IMoneyMovement
+    public interface ICrudData<T>
     {
         bool Add(T item);
 
@@ -10,7 +10,7 @@ namespace Task.CommonTypes.Interfaces
 
         T Get(int id);
 
-        T Update(T item);
+        bool Update(T item);
 
         bool Delete(int id);
     }

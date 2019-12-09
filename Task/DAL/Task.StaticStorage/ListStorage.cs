@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Task.CommonTypes.Interfaces;
 
 namespace Task.StaticStorage
@@ -27,17 +28,24 @@ namespace Task.StaticStorage
 
         public bool Delete(int id)
         {
-            throw new System.NotImplementedException();
+            return listMovements.Remove(listMovements.Find(it => it.Id == id));
         }
 
         public T Get(int id)
         {
-            listMovements.Exists(it => it.Id == id);
+            return listMovements.FirstOrDefault(it => it.Id == id);
         }
 
-        public T Update(T item)
+        public bool Update(T item)
         {
-            throw new System.NotImplementedException();
+            var result = Delete(item.Id);
+
+            if (result)
+            {
+                Add(item);
+            }
+
+            return result;
         }
 
         IEnumerable<T> ICrudData<T>.Get()
