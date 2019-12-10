@@ -15,7 +15,7 @@ namespace Task.StaticStorage
 
         }
 
-        public int Add(T item)
+        public virtual int Add(T item)
         {
             var it = userList.FirstOrDefault(i => i.Id == item.Id);
 
@@ -28,17 +28,17 @@ namespace Task.StaticStorage
             return it == null ? item.Id : -1;
         }
 
-        public bool Delete(int id)
+        public virtual bool Delete(int id)
         {
             return userList.Remove(userList.Find(it => it.Id == id));
         }
 
-        public T Get(int id)
+        public virtual T Get(int id)
         {
             return userList.FirstOrDefault(it => it.Id == id);
         }
 
-        public T Update(int id, T item)
+        public virtual T Update(int id, T item)
         {
             var result = Get(id);
 
@@ -50,7 +50,7 @@ namespace Task.StaticStorage
             return result;
         }
 
-        IEnumerable<T> IRepository<T>.Get()
+        public virtual IEnumerable<T> Get()
         {
             return userList;
         }

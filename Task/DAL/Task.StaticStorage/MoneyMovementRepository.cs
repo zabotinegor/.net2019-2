@@ -9,6 +9,7 @@ namespace Task.StaticStorage
     {
         private static readonly List<T> moneyMovementList = new List<T>();
         private static int id = 0;
+
         public MoneyMovementRepository()
         {
 
