@@ -8,18 +8,21 @@ namespace Task.StaticStorage
         where T : IUser
     {
         private static readonly List<T> userList;
+        private static int id;
 
         static UserRepository()
         {
             userList = new List<T>();
+            id = 0;
         }
 
         public bool Add(T item)
         {
-            bool result = userList.Contains(item);
+            bool result = !userList.Contains(item);
 
             if (result)
             {
+                item.Id = id++;
                 userList.Add(item);
             }
 

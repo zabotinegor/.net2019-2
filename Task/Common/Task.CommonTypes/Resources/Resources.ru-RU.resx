@@ -121,4 +121,19 @@
     <value>Добро пожаловать в Ваш личный финансовый помощник!
 Нажмите любую клавишу, чтобы продолжить.</value>
   </data>
+  <data name="EnterUserMessage" xml:space="preserve">
+    <value>Введите пользователя.</value>
+  </data>
+  <data name="EnterUserFirstName" xml:space="preserve">
+    <value>Введите имя: </value>
+  </data>
+  <data name="EnterUserLastName" xml:space="preserve">
+    <value>Введите фамилию: </value>
+  </data>
+  <data name="KeyToContinueMessage" xml:space="preserve">
+    <value>Нажмите любую клавишу, чтобы продолжить...</value>
+  </data>
+  <data name="ErrorUserName" xml:space="preserve">
+    <value>Неверное имя/фамилия пользователя.</value>
+  </data>
 </root>

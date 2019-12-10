@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BLL\Task.ProcessingLogic\Task.ProcessingLogic.csproj" />
     <ProjectReference Include="..\..\Common\Task.CommonTypes\Task.CommonTypes.csproj" />
   </ItemGroup>
 

@@ -101,4 +101,19 @@
     <value>Welcome to your personal financial assistant!
 Press any key to continue.</value>
   </data>
+  <data name="EnterUserMessage" xml:space="preserve">
+    <value>Enter user.</value>
+  </data>
+  <data name="EnterUserFirstName" xml:space="preserve">
+    <value>Enter name: </value>
+  </data>
+  <data name="EnterUserLastName" xml:space="preserve">
+    <value>Enter surname: </value>
+  </data>
+  <data name="KeyToContinueMessage" xml:space="preserve">
+    <value>Press any key to continue...</value>
+  </data>
+  <data name="ErrorUserName" xml:space="preserve">
+    <value>Invalid user name/surname.</value>
+  </data>
 </root>

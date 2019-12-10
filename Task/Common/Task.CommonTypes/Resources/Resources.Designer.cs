@@ -61,12 +61,57 @@ namespace Task.CommonTypes.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter name: .
+        /// </summary>
+        public static string EnterUserFirstName {
+            get {
+                return ResourceManager.GetString("EnterUserFirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter surname: .
+        /// </summary>
+        public static string EnterUserLastName {
+            get {
+                return ResourceManager.GetString("EnterUserLastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter user..
+        /// </summary>
+        public static string EnterUserMessage {
+            get {
+                return ResourceManager.GetString("EnterUserMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid user name/surname..
+        /// </summary>
+        public static string ErrorUserName {
+            get {
+                return ResourceManager.GetString("ErrorUserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Welcome to your personal financial assistant!
         ///Press any key to continue..
         /// </summary>
         public static string HelloMessage {
             get {
                 return ResourceManager.GetString("HelloMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Press any key to continue....
+        /// </summary>
+        public static string KeyToContinueMessage {
+            get {
+                return ResourceManager.GetString("KeyToContinueMessage", resourceCulture);
             }
         }
     }
