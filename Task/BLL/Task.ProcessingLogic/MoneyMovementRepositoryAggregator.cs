@@ -7,21 +7,16 @@ namespace Task.ProcessingLogic
     public class MoneyMovementRepositoryAggregator<T> : IRepository<T>
         where T : IMoneyMovement
     {
-        private IRepository<IMoneyMovement> moveMoneyRepository;
+        private IRepository<T> moveMoneyRepository;
 
         public MoneyMovementRepositoryAggregator()
         {
-            moveMoneyRepository = new MoneyMovementRepository<IMoneyMovement>();
-        }
-
-        public bool Add(T item)
-        {
-            throw new System.NotImplementedException();
+            moveMoneyRepository = new MoneyMovementRepository<T>();
         }
 
         public IEnumerable<T> Get()
         {
-            throw new System.NotImplementedException();
+            return moveMoneyRepository.Get();
         }
 
         public T Get(int id)
@@ -29,12 +24,17 @@ namespace Task.ProcessingLogic
             throw new System.NotImplementedException();
         }
 
-        public bool Update(T item)
+        public T Update(int id, T item)
         {
             throw new System.NotImplementedException();
         }
 
         public bool Delete(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int Add(T item)
         {
             throw new System.NotImplementedException();
         }

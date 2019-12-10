@@ -7,26 +7,25 @@ namespace Task.StaticStorage
     public class UserRepository<T> : IRepository<T>
         where T : IUser
     {
-        private static readonly List<T> userList;
-        private static int id;
+        private static readonly List<T> userList = new List<T>();
+        private static int id = 0;
 
-        static UserRepository()
+        public UserRepository()
         {
-            userList = new List<T>();
-            id = 0;
+
         }
 
-        public bool Add(T item)
+        public int Add(T item)
         {
-            bool result = !userList.Contains(item);
+            var it = userList.FirstOrDefault(i => i.Id == item.Id);
 
-            if (result)
+            if (it == null)
             {
                 item.Id = id++;
                 userList.Add(item);
             }
 
-            return result;
+            return it == null ? item.Id : -1;
         }
 
         public bool Delete(int id)
@@ -39,13 +38,13 @@ namespace Task.StaticStorage
             return userList.FirstOrDefault(it => it.Id == id);
         }
 
-        public bool Update(T item)
+        public T Update(int id, T item)
         {
-            var result = Delete(item.Id);
+            var result = Get(id);
 
-            if (result)
+            if (result != null)
             {
-                Add(item);
+                result = item;
             }
 
             return result;

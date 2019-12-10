@@ -9,25 +9,26 @@ namespace Task.ConsoleApp
     class Program
     {
         private static MenuState menuState = MenuState.EnterUser;
-        private static UserRepositoryAggregator<IUser> userRepositoryAggregator;
-        private static MoneyMovementRepositoryAggregator<IMoneyMovement> moneyMovementRepositoryAggregator;
+        private static IRepository<IUser> userRepositoryAggregator;
 
         static void Main(string[] args)
         {
             userRepositoryAggregator = new UserRepositoryAggregator<IUser>();
-            moneyMovementRepositoryAggregator = new MoneyMovementRepositoryAggregator<IMoneyMovement>();
 
             Console.WriteLine(CommonTypes.Resources.Resources.HelloMessage);
             PressAnyKeyAndClear();
 
             bool showMenu = true;
 
-            while(showMenu)
+            while (showMenu)
             {
                 showMenu = MainMenu();
             }
 
-            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine(CommonTypes.Resources.Resources.GoodByeMessage);
+            Console.Write(CommonTypes.Resources.Resources.KeyToContinueMessage);
+            PressAnyKeyAndClear();
         }
 
         private static bool MainMenu()
@@ -43,7 +44,7 @@ namespace Task.ConsoleApp
                     }
                     else
                     {
-                        Console.WriteLine(CommonTypes.Resources.Resources.ErrorUserName);
+                        Console.WriteLine(CommonTypes.Resources.Resources.UserNameError);
                         Console.Write(CommonTypes.Resources.Resources.KeyToContinueMessage);
                         PressAnyKeyAndClear();
                     }
@@ -52,13 +53,54 @@ namespace Task.ConsoleApp
                     result = ExecuteCommand();
                     break;
             }
-            
+
             return result;
         }
 
         private static bool ExecuteCommand()
         {
-            return false;
+            bool result = true;
+
+            Console.Clear();
+            Console.WriteLine(string.Concat("1. ", CommonTypes.Resources.Resources.ShowAllInvite));
+            Console.WriteLine(string.Concat("2. ", CommonTypes.Resources.Resources.CreateIncomeInvite));
+            Console.WriteLine(string.Concat("3. ", CommonTypes.Resources.Resources.CreateOutcomeInvite));
+            Console.WriteLine(string.Concat("0. ", CommonTypes.Resources.Resources.ExitInvite));
+            
+            switch(ConvertToCommand(Console.ReadKey()))
+            {
+                case Command.ShowAll:
+                    result = true;
+                    break;
+                case Command.NewIncome:
+                    result = true;
+                    break;
+                case Command.NewOutcome:
+                    result = true;
+                    break;
+                case Command.Exit:
+                    result = false;
+                    break;
+            }
+
+            return result;
+        }
+
+        private static Command ConvertToCommand(ConsoleKeyInfo key)
+        {
+            switch (key.Key)
+            {
+                case ConsoleKey.D1:
+                    return Command.ShowAll;
+                case ConsoleKey.D2:
+                    return Command.NewIncome;
+                case ConsoleKey.D3:
+                    return Command.NewOutcome;
+                case ConsoleKey.D0:
+                    return Command.Exit;
+                default:
+                    return Command.NoCommand;
+            }
         }
 
         private static bool LogIn()
@@ -69,13 +111,15 @@ namespace Task.ConsoleApp
             Console.Write(CommonTypes.Resources.Resources.EnterUserLastName);
             var lastName = Console.ReadLine();
 
-            bool result = userRepositoryAggregator.CreateOrChoose( new User()
+            var result = userRepositoryAggregator.Add(new User()
             {
                 FirstName = firstName,
                 LastName = lastName
             });
 
-            return result;
+            //TODO: Change
+            return false;
+            //return result;
         }
 
         private static void PressAnyKeyAndClear()

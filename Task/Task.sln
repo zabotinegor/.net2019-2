@@ -7,17 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterf
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{FD863068-007A-4D8F-961E-455D7729BE55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.CommonTypes", "Common\Task.CommonTypes\Task.CommonTypes.csproj", "{CC038F4B-B875-4E8E-B938-8E624EE5D64E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task.CommonTypes", "Common\Task.CommonTypes\Task.CommonTypes.csproj", "{CC038F4B-B875-4E8E-B938-8E624EE5D64E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.ConsoleApp", "UserInterface\Task.ConsoleApp\Task.ConsoleApp.csproj", "{D383FA8F-8B93-45F2-B8F1-7FA5CA99112F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task.ConsoleApp", "UserInterface\Task.ConsoleApp\Task.ConsoleApp.csproj", "{D383FA8F-8B93-45F2-B8F1-7FA5CA99112F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{F10950FA-0A24-41BA-89B5-A383BB26BA5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.ProcessingLogic", "BLL\Task.ProcessingLogic\Task.ProcessingLogic.csproj", "{B19FD76A-3024-4997-AE7B-97AE89BC86A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task.ProcessingLogic", "BLL\Task.ProcessingLogic\Task.ProcessingLogic.csproj", "{B19FD76A-3024-4997-AE7B-97AE89BC86A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{A02D6E72-B41C-4A28-A432-29BCDA2EDB61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.StaticStorage", "DAL\Task.StaticStorage\Task.StaticStorage.csproj", "{514C049A-E49F-46EC-9154-329B151336D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task.StaticStorage", "DAL\Task.StaticStorage\Task.StaticStorage.csproj", "{514C049A-E49F-46EC-9154-329B151336D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D72C416B-2561-4A0A-9E2E-9F05178802F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task.UnitTests", "Tests\Task.UnitTests\Task.UnitTests.csproj", "{1399578E-8EA7-4044-B3F1-2BB7019FD8CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +45,10 @@ Global
 		{514C049A-E49F-46EC-9154-329B151336D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{514C049A-E49F-46EC-9154-329B151336D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{514C049A-E49F-46EC-9154-329B151336D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1399578E-8EA7-4044-B3F1-2BB7019FD8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1399578E-8EA7-4044-B3F1-2BB7019FD8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1399578E-8EA7-4044-B3F1-2BB7019FD8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1399578E-8EA7-4044-B3F1-2BB7019FD8CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{D383FA8F-8B93-45F2-B8F1-7FA5CA99112F} = {8A6228C3-938D-4B9D-BF99-C14CB211654A}
 		{B19FD76A-3024-4997-AE7B-97AE89BC86A2} = {F10950FA-0A24-41BA-89B5-A383BB26BA5E}
 		{514C049A-E49F-46EC-9154-329B151336D1} = {A02D6E72-B41C-4A28-A432-29BCDA2EDB61}
+		{1399578E-8EA7-4044-B3F1-2BB7019FD8CC} = {D72C416B-2561-4A0A-9E2E-9F05178802F6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AEC06D0B-AEFC-4D24-A4E8-ADB519D38C3A}

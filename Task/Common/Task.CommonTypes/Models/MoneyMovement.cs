@@ -4,7 +4,7 @@ using Task.CommonTypes.Interfaces;
 
 namespace Task.CommonTypes.Models
 {
-    class MoneyMovement : IMoneyMovement
+    public class MoneyMovement : IMoneyMovement
     {
         public int Id { get; set; }
         public Direction Direction { get; set; }

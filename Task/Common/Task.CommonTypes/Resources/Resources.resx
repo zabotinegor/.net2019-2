@@ -113,7 +113,25 @@ Press any key to continue.</value>
   <data name="KeyToContinueMessage" xml:space="preserve">
     <value>Press any key to continue...</value>
   </data>
-  <data name="ErrorUserName" xml:space="preserve">
+  <data name="UserNameError" xml:space="preserve">
     <value>Invalid user name/surname.</value>
+  </data>
+  <data name="ShowAllInvite" xml:space="preserve">
+    <value>Display the full list.</value>
+  </data>
+  <data name="CreateIncomeInvite" xml:space="preserve">
+    <value>Create a new income.</value>
+  </data>
+  <data name="CreateOutcomeInvite" xml:space="preserve">
+    <value>Create a new expense.</value>
+  </data>
+  <data name="ExitInvite" xml:space="preserve">
+    <value>Exit.</value>
+  </data>
+  <data name="GoodByeMessage" xml:space="preserve">
+    <value>Good Bye!</value>
+  </data>
+  <data name="HelloUserMessage" xml:space="preserve">
+    <value>Hello, </value>
   </data>
 </root>

@@ -61,6 +61,24 @@ namespace Task.CommonTypes.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create a new income..
+        /// </summary>
+        public static string CreateIncomeInvite {
+            get {
+                return ResourceManager.GetString("CreateIncomeInvite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create a new expense..
+        /// </summary>
+        public static string CreateOutcomeInvite {
+            get {
+                return ResourceManager.GetString("CreateOutcomeInvite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter name: .
         /// </summary>
         public static string EnterUserFirstName {
@@ -88,11 +106,20 @@ namespace Task.CommonTypes.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid user name/surname..
+        ///   Looks up a localized string similar to Exit..
         /// </summary>
-        public static string ErrorUserName {
+        public static string ExitInvite {
             get {
-                return ResourceManager.GetString("ErrorUserName", resourceCulture);
+                return ResourceManager.GetString("ExitInvite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Good Bye!.
+        /// </summary>
+        public static string GoodByeMessage {
+            get {
+                return ResourceManager.GetString("GoodByeMessage", resourceCulture);
             }
         }
         
@@ -107,11 +134,38 @@ namespace Task.CommonTypes.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hello, .
+        /// </summary>
+        public static string HelloUserMessage {
+            get {
+                return ResourceManager.GetString("HelloUserMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Press any key to continue....
         /// </summary>
         public static string KeyToContinueMessage {
             get {
                 return ResourceManager.GetString("KeyToContinueMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Display the full list..
+        /// </summary>
+        public static string ShowAllInvite {
+            get {
+                return ResourceManager.GetString("ShowAllInvite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid user name/surname..
+        /// </summary>
+        public static string UserNameError {
+            get {
+                return ResourceManager.GetString("UserNameError", resourceCulture);
             }
         }
     }

@@ -3,8 +3,9 @@
     public enum Command
     {
         NewIncome,
-        NewOutCome,
+        NewOutcome,
         ShowAll,
-        Exit
+        Exit,
+        NoCommand
     }
 }

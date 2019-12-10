@@ -5,13 +5,13 @@ namespace Task.CommonTypes.Interfaces
 {
     public interface IRepository<T>
     {
-        bool Add(T item);
+        int Add(T item);
 
         IEnumerable<T> Get();
 
         T Get(int id);
 
-        bool Update(T item);
+        T Update(int id, T item);
 
         bool Delete(int id);
     }

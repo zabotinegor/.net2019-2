@@ -133,7 +133,25 @@
   <data name="KeyToContinueMessage" xml:space="preserve">
     <value>Нажмите любую клавишу, чтобы продолжить...</value>
   </data>
-  <data name="ErrorUserName" xml:space="preserve">
+  <data name="UserNameError" xml:space="preserve">
     <value>Неверное имя/фамилия пользователя.</value>
+  </data>
+  <data name="ShowAllInvite" xml:space="preserve">
+    <value>Вывести на экран весь список.</value>
+  </data>
+  <data name="CreateIncomeInvite" xml:space="preserve">
+    <value>Создать новый доход.</value>
+  </data>
+  <data name="CreateOutcomeInvite" xml:space="preserve">
+    <value>Создать новый расход.</value>
+  </data>
+  <data name="ExitInvite" xml:space="preserve">
+    <value>Выход.</value>
+  </data>
+  <data name="GoodByeMessage" xml:space="preserve">
+    <value>Всего доброго!</value>
+  </data>
+  <data name="HelloUserMessage" xml:space="preserve">
+    <value>Здравствуйте, </value>
   </data>
 </root>
