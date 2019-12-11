@@ -7,7 +7,7 @@ namespace Assistant.DAL.Core.Repositories.GenericRepository
     {
         void Create(TEntity item);
 
-        TEntity FindById(int id);
+        TEntity GetById(int id);
 
         IEnumerable<TEntity> Get();
 

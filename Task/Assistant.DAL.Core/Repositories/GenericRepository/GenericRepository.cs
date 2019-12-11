@@ -1,6 +1,7 @@
 ﻿using Assistant.DAL.Core.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Assistant.DAL.Core.Repositories.GenericRepository
 {
@@ -12,38 +13,51 @@ namespace Assistant.DAL.Core.Repositories.GenericRepository
         public GenericRepository(AssistantContext context)
         {
             this.context = context;
-
-            //dbSet = this.context.Set<TEntity>();
-            //ist = this.context.Set<TEntity>();
+            list = this.context.Set<TEntity>();
         }
 
         public void Create(TEntity item)
         {
+            if (item != null)
+            {
+                list.Add(item);
+            }
+
             throw new NotImplementedException();
         }
 
-        public TEntity FindById(int id)
+        public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
+            return list.FirstOrDefault(item => (int)(item.GetType()
+                                                          .GetProperties()
+                                                          .FirstOrDefault(p => p.Name
+                                                                                .ToLower()
+                                                                                .Contains("id"))?
+                                                          .GetValue(this)) == id);
         }
 
         public IEnumerable<TEntity> Get()
         {
-            throw new NotImplementedException();
+            return list;
         }
 
         public IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
         {
-            throw new NotImplementedException();
+            return list.Where(predicate);
         }
 
         public void Remove(TEntity item)
         {
-            throw new NotImplementedException();
+            list.Remove(item);
         }
 
         public void Update(TEntity item)
         {
+            var changedItem = GetById((int)item.GetType().GetProperties().FirstOrDefault(p => p.Name.ToLower().Contains("id"))?.GetValue(this));
+
+            //replacing values
+            //adding value
+
             throw new NotImplementedException();
         }
     }
