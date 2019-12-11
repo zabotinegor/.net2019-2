@@ -1,6 +1,7 @@
 ﻿using Assistant.DAL.Core.Models;
 using Assistant.DAL.Core.Repositories.EntityRepositories;
 using Assistant.DAL.Core.Repositories.EntityRepositoryInterfaces;
+using System;
 
 namespace Assistant.DAL.Core.UnitOfWork
 {
@@ -24,9 +25,27 @@ namespace Assistant.DAL.Core.UnitOfWork
             set => userRepository = value; 
         }
 
+        public bool Disposed { get; private set; }
+
         public UnitOfWork()
         {
             context = new AssistantContext();
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected void Dispose(bool disposing)
+        {
+            //if (!Disposed && disposing)
+            //{
+            //    context.Dispose();
+            //}
+
+            Disposed = true;
         }
     }
 }

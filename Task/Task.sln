@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistant.DAL.Core", "Assistant.DAL.Core\Assistant.DAL.Core.csproj", "{E463BF16-0706-4BC9-B79C-294E28B26C17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assistant.DAL.Core", "Assistant.DAL.Core\Assistant.DAL.Core.csproj", "{E463BF16-0706-4BC9-B79C-294E28B26C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistant.BLL.Core", "Assistant.BLL.Core\Assistant.BLL.Core.csproj", "{B955A5FC-E74F-488F-99CF-8E96E28BCD86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assistant.BLL.Core", "Assistant.BLL.Core\Assistant.BLL.Core.csproj", "{B955A5FC-E74F-488F-99CF-8E96E28BCD86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistant.Common", "Assistant.Common\Assistant.Common.csproj", "{FF01C2CB-CCA8-4838-8FE7-ECD0346EADDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assistant.Common", "Assistant.Common\Assistant.Common.csproj", "{FF01C2CB-CCA8-4838-8FE7-ECD0346EADDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
@@ -10,13 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Assistant.DAL.Core\Assistant.DAL.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Services\MoneyMovement\Delete\" />
-    <Folder Include="Services\MoneyMovement\Write\" />
-    <Folder Include="Services\MoneyMovement\Read\" />
+    <ProjectReference Include="..\Assistant.BLL.Core\Assistant.BLL.Core.csproj" />
   </ItemGroup>
 
 </Project>
