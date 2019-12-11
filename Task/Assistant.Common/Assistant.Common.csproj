@@ -4,4 +4,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Repositories\EntityRepositoryInterfaces\" />
+    <Folder Include="UnitOfWork\" />
+    <Folder Include="Repositories\GenericRepository\" />
+    <Folder Include="Repositories\EntityRepositories\" />
+  </ItemGroup>
+
 </Project>
