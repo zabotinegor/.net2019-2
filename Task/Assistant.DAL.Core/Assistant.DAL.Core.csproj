@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Repositories\EntityRepositories\" />
     <Folder Include="Repositories\EntityRepositoryInterfaces\" />
-    <Folder Include="UnitOfWork\" />
   </ItemGroup>
 
   <ItemGroup>
