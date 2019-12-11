@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Models\" />
     <Folder Include="Resources\" />
-    <Folder Include="Repositories\EntityRepositoryInterfaces\" />
-    <Folder Include="UnitOfWork\" />
-    <Folder Include="Repositories\GenericRepository\" />
-    <Folder Include="Repositories\EntityRepositories\" />
   </ItemGroup>
 
 </Project>

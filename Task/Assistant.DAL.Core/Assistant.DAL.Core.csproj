@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\EntityRepositories\" />
+    <Folder Include="Repositories\EntityRepositoryInterfaces\" />
+    <Folder Include="UnitOfWork\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Assistant.Common\Assistant.Common.csproj" />
+  </ItemGroup>
+
 </Project>

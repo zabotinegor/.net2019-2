@@ -1,7 +1,7 @@
 ﻿using Assistant.Common.Enums;
 using System;
 
-namespace Assistant.Common.Models
+namespace Assistant.DAL.Core.Models
 {
     public class MoneyMovement
     {

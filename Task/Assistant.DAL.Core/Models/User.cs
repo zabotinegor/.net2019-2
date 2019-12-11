@@ -1,4 +1,4 @@
-﻿namespace Assistant.Common.Models
+﻿namespace Assistant.DAL.Core.Models
 {
     public class User
     {
