@@ -17,7 +17,6 @@
     <Folder Include="Services\MoneyMovement\Delete\" />
     <Folder Include="Services\MoneyMovement\Write\" />
     <Folder Include="Services\MoneyMovement\Read\" />
-    <Folder Include="Services\User\Write\ChangeUser\" />
   </ItemGroup>
 
 </Project>

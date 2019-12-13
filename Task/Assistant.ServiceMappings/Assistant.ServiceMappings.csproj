@@ -11,6 +11,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Assistant.BLL.Core\Assistant.BLL.Core.csproj" />
+    <ProjectReference Include="..\Assistant.Common\Assistant.Common.csproj" />
+    <ProjectReference Include="..\Assistant.DAL.Core\Assistant.DAL.Core.csproj" />
   </ItemGroup>
 
 </Project>

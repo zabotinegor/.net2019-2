@@ -8,7 +8,7 @@ namespace Assistant.ServiceMappings.IoC
         {
             //TODO : insert your own solution
             //services.ConfigureEntityFramework();
-            //services.ConfigureMediator();
+            services.ConfigureMediator();
         }
     }
 }
