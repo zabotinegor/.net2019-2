@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\EntityRepositories\" />
-    <Folder Include="Repositories\EntityRepositoryInterfaces\" />
-    <Folder Include="UnitOfWork\" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>

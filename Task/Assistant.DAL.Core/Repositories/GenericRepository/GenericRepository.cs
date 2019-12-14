@@ -1,50 +1,60 @@
 ﻿using Assistant.DAL.Core.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace Assistant.DAL.Core.Repositories.GenericRepository
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         private readonly AssistantContext context;
-        private readonly List<TEntity> list;
+        private readonly DbSet<TEntity> dbSet;
 
         public GenericRepository(AssistantContext context)
         {
             this.context = context;
-
-            //dbSet = this.context.Set<TEntity>();
-            //ist = this.context.Set<TEntity>();
+            dbSet = this.context.Set<TEntity>();
         }
 
-        public void Create(TEntity item)
+        public void Create(TEntity entity)
         {
-            throw new NotImplementedException();
+            dbSet.Add(entity);
         }
 
-        public TEntity FindById(int id)
+        public TEntity FindById(object id)
         {
-            throw new NotImplementedException();
+            return dbSet.Find(id);
         }
 
-        public IEnumerable<TEntity> Get()
+        public IQueryable<TEntity> Get()
         {
-            throw new NotImplementedException();
+            return dbSet.AsQueryable();
         }
 
-        public IEnumerable<TEntity> Get(Func<TEntity, bool> predicate)
+        public IQueryable<TEntity> Get(Func<TEntity, bool> predicate)
         {
-            throw new NotImplementedException();
+            return dbSet.Where(predicate).AsQueryable();
         }
 
-        public void Remove(TEntity item)
+        public void Remove(object id)
         {
-            throw new NotImplementedException();
+            TEntity entity = dbSet.Find(id);
+            Remove(entity);
         }
 
-        public void Update(TEntity item)
+        public void Remove(TEntity entity)
         {
-            throw new NotImplementedException();
+            if (context.Entry(entity).State == EntityState.Detached)
+            {
+                dbSet.Attach(entity);
+            }
+            dbSet.Remove(entity);
+        }
+
+        public void Update(TEntity entity)
+        {
+            dbSet.Attach(entity);
+            context.Entry(entity).State = EntityState.Modified;
         }
     }
 }

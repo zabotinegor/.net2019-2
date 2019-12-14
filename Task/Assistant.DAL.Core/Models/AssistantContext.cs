@@ -1,16 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Assistant.DAL.Core.Models
 {
-    public class AssistantContext
+    public class AssistantContext : DbContext
     {
-        public AssistantContext()
-        {
+        public AssistantContext(DbContextOptions<AssistantContext> options)
+                : base(options)
+        { }
 
-        }
+        public DbSet<User> Users { get; set; }
 
-        public List<User> Users { get; set; }
-        
-        public List<MoneyMovement> MoneyMovements { get; set; } 
+        public DbSet<MoneyMovement> MoneyMovements { get; set; }
     }
 }

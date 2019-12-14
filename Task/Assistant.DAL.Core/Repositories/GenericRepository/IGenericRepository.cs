@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Assistant.DAL.Core.Repositories.GenericRepository
 {
     public interface IGenericRepository<TEntity> where TEntity : class
     {
-        void Create(TEntity item);
+        void Create(TEntity entity);
 
-        TEntity FindById(int id);
+        TEntity FindById(object id);
 
-        IEnumerable<TEntity> Get();
+        IQueryable<TEntity> Get();
 
-        IEnumerable<TEntity> Get(Func<TEntity, bool> predicate);
+        IQueryable<TEntity> Get(Func<TEntity, bool> predicate);
 
-        void Remove(TEntity item);
+        public void Remove(object id);
 
-        void Update(TEntity item);
+        void Remove(TEntity entity);
+
+        void Update(TEntity entity);
     }
 }
