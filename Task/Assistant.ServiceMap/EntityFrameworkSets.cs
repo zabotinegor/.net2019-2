@@ -9,7 +9,7 @@ namespace Assistant.ServiceMap
         internal static void ConfigureEntityFramework(this IServiceCollection services)
         {
             //TODO : Add extention for AddDbContext
-            services.AddDbContext<AssistantContext>(options => options.UseSqlServer(Settings.ConnectionString));
+            //services.AddDbContext<AssistantContext>(options => options.UseSqlServer(Settings.ConnectionString));
         }
     }
 }

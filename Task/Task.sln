@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assistant.BLL.Core", "Assis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assistant.Common", "Assistant.Common\Assistant.Common.csproj", "{FF01C2CB-CCA8-4838-8FE7-ECD0346EADDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistant.UI.ConsoleApp.Core", "Assistant.UI.ConsoleApp.Core\Assistant.UI.ConsoleApp.Core.csproj", "{DE72C8AC-96AE-4199-8CC9-23FCDE892296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assistant.UI.ConsoleApp.Core", "Assistant.UI.ConsoleApp.Core\Assistant.UI.ConsoleApp.Core.csproj", "{DE72C8AC-96AE-4199-8CC9-23FCDE892296}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistant.ServiceMap", "Assistant.ServiceMap\Assistant.ServiceMap.csproj", "{DCA1CC92-6A05-4BC8-8DC5-E45016F02EDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assistant.ServiceMap", "Assistant.ServiceMap\Assistant.ServiceMap.csproj", "{DCA1CC92-6A05-4BC8-8DC5-E45016F02EDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistant.UI.WebApp.Core", "Assistant.UI.WebApp.Core\Assistant.UI.WebApp.Core.csproj", "{EF76862A-C09D-4D95-9BE7-22E184A50A74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DCA1CC92-6A05-4BC8-8DC5-E45016F02EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCA1CC92-6A05-4BC8-8DC5-E45016F02EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCA1CC92-6A05-4BC8-8DC5-E45016F02EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF76862A-C09D-4D95-9BE7-22E184A50A74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF76862A-C09D-4D95-9BE7-22E184A50A74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF76862A-C09D-4D95-9BE7-22E184A50A74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF76862A-C09D-4D95-9BE7-22E184A50A74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

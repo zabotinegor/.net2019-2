@@ -1,4 +1,5 @@
 ﻿using Assistant.BLL.Core.Infrastructure;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Assistant.ServiceMap
