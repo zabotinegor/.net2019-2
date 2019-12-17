@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Assistant.DAL.Core.UnitOfWork
 {
-    class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly AssistantContext context;
         private IUserRepository userRepository;

@@ -5,7 +5,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <Folder Include="Services\MoneyMovement\Delete\DeleteMoneyMovement\" />
+    <Folder Include="Services\MoneyMovement\Read\GetAllMoneyMovements\" />
+    <Folder Include="Services\MoneyMovement\Read\GetMoneyMovementById\" />
+    <Folder Include="Services\MoneyMovement\Write\CreateMoneyMovement\" />
+    <Folder Include="Services\MoneyMovement\Write\UpdateMoneyMovement\" />
+    <Folder Include="Services\User\Delete\DeleteUser\" />
+    <Folder Include="Services\User\Read\GetAllUsers\" />
+    <Folder Include="Services\User\Read\GetUserById\" />
+    <Folder Include="Services\User\Write\CreateUser\" />
+    <Folder Include="Services\User\Write\UpdateUser\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="7.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Assistant.DAL.Core\Assistant.DAL.Core.csproj" />
   </ItemGroup>
 
 </Project>
