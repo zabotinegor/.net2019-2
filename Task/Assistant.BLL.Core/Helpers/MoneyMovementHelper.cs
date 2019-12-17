@@ -30,5 +30,24 @@ namespace Assistant.BLL.Core.Helpers
                 UserId = model.UserId
             };
         }
+
+        //TODO : add own implementation
+        public static MoneyMovementDto CheckChangeableProps(this MoneyMovementDto model, MoneyMovement dbModel)
+        {
+            MoneyMovementDto result = model;
+
+
+
+            return result;
+        }
+
+        public static MoneyMovement CheckChangeableProps(this MoneyMovement model, MoneyMovementDto modelDto)
+        {
+            MoneyMovement result = model;
+
+            
+
+            return result;
+        }
     }
 }

@@ -7,35 +7,35 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Assistant.BLL.Core.Services.User.Delete.DeleteUser
+namespace Assistant.BLL.Core.Services.MoneyMovement.Delete.DeleteMoneyMovement
 {
-    public sealed class DeleteUserQuery : IRequest<ResponseModel<object>>
+    public sealed class DeleteMoneyMovementQuery : IRequest<ResponseModel<object>>
     {
-        public int UserId { get; }
+        public int MoneyMovementId { get; }
 
-        public DeleteUserQuery(int userId)
+        public DeleteMoneyMovementQuery(int moneyMovementId)
         {
-            UserId = userId;
+            MoneyMovementId = moneyMovementId;
         }
     }
 
-    public class DeleteUserHandler : BaseHandler, IRequestHandler<DeleteUserQuery, ResponseModel<object>>
+    public class DeleteMoneyMovementHandler : BaseHandler, IRequestHandler<DeleteMoneyMovementQuery, ResponseModel<object>>
     {
-        public async Task<ResponseModel<object>> Handle(DeleteUserQuery request, CancellationToken cancellationToken)
+        public async Task<ResponseModel<object>> Handle(DeleteMoneyMovementQuery request, CancellationToken cancellationToken)
         {
             using (var uow = UnitOfWork)
             {
-                var user = await uow.UserRepository.Get(r => r.Id == request.UserId)
+                var moneyMovement = await uow.MoneyMovementRepository.Get(r => r.Id == request.MoneyMovementId)
                                     .FirstOrDefaultAsync(cancellationToken);
 
-                if (user == null)
+                if (moneyMovement == null)
                 {
                     return GenerateNotFoundResult<object>(OperationType.Delete,
-                            nameof(user),
-                            request.UserId);
+                            nameof(moneyMovement),
+                            request.MoneyMovementId);
                 }
 
-                uow.UserRepository.Remove(user);
+                uow.MoneyMovementRepository.Remove(moneyMovement);
 
                 try
                 {

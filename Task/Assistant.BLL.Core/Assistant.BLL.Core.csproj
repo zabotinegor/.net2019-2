@@ -5,14 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\MoneyMovement\Delete\DeleteMoneyMovement\" />
-    <Folder Include="Services\MoneyMovement\Read\GetAllMoneyMovements\" />
-    <Folder Include="Services\MoneyMovement\Read\GetMoneyMovementById\" />
-    <Folder Include="Services\MoneyMovement\Write\CreateMoneyMovement\" />
-    <Folder Include="Services\MoneyMovement\Write\UpdateMoneyMovement\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MediatR" Version="7.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
